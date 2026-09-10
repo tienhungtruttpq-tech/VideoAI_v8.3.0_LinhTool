@@ -74,63 +74,33 @@ class MainApp(QMainWindow):
         self.statusBar().showMessage("Ready")
 
     def _setup_tabs(self):
-        tab_configs = []
+        import sys
+        sys.stdout.flush()
 
-        try:
-            from modules.veo3.frontend.main.veo3_text_to_video_tab import TextToVideoTab as Veo3T2V
-            tab_configs.append(("Veo3 Text→Video", Veo3T2V))
-        except ImportError as e:
-            print(f"[WARN] Veo3 T2V not loaded: {e}")
+        tab_imports = [
+            ("Veo3 Text-Video", "modules.veo3.frontend.main.veo3_text_to_video_tab", "TextToVideoTab"),
+            ("Veo3 Image-Video", "modules.veo3.frontend.main.veo3_image_to_video_tab", "ImageToVideoTab"),
+            ("Veo3 Text-Image", "modules.veo3.frontend.main.veo3_text_image_to_image_tab", "TextImageToImageTab"),
+            ("Veo3 Ref-Video", "modules.veo3.frontend.main.veo3_reference_to_video_tab", "ReferenceToVideoTab"),
+            ("Veo3 Start-End", "modules.veo3.frontend.main.veo3_start_end_to_video_tab", "StartEndToVideoTab"),
+            ("Sora2", "modules.sora2.frontend.main.sora2_text_image_to_video_tab", "TextImageToVideoTab"),
+            ("Grok", "modules.grok.frontend.main.grok_text_image_to_video_tab", "GrokTextImageToVideoTab"),
+            ("Seedance", "modules.seedance.frontend.main.seedance_text_image_to_video_tab", "SeedanceTextImageToVideoTab"),
+        ]
 
-        try:
-            from modules.veo3.frontend.main.veo3_image_to_video_tab import ImageToVideoTab as Veo3I2V
-            tab_configs.append(("Veo3 Image→Video", Veo3I2V))
-        except ImportError as e:
-            print(f"[WARN] Veo3 I2V not loaded: {e}")
-
-        try:
-            from modules.veo3.frontend.main.veo3_text_image_to_image_tab import TextImageToImageTab as Veo3TI2I
-            tab_configs.append(("Veo3 Text→Image", Veo3TI2I))
-        except ImportError as e:
-            print(f"[WARN] Veo3 TI2I not loaded: {e}")
-
-        try:
-            from modules.veo3.frontend.main.veo3_reference_to_video_tab import ReferenceToVideoTab as Veo3Ref
-            tab_configs.append(("Veo3 Ref→Video", Veo3Ref))
-        except ImportError as e:
-            print(f"[WARN] Veo3 Ref not loaded: {e}")
-
-        try:
-            from modules.veo3.frontend.main.veo3_start_end_to_video_tab import StartEndToVideoTab as Veo3SE
-            tab_configs.append(("Veo3 Start/End", Veo3SE))
-        except ImportError as e:
-            print(f"[WARN] Veo3 SE not loaded: {e}")
-
-        try:
-            from modules.sora2.frontend.main.sora2_text_image_to_video_tab import TextImageToVideoTab as Sora2Tab
-            tab_configs.append(("Sora2", Sora2Tab))
-        except ImportError as e:
-            print(f"[WARN] Sora2 not loaded: {e}")
-
-        try:
-            from modules.grok.frontend.main.grok_text_image_to_video_tab import GrokTextImageToVideoTab as GrokTab
-            tab_configs.append(("Grok", GrokTab))
-        except ImportError as e:
-            print(f"[WARN] Grok not loaded: {e}")
-
-        try:
-            from modules.seedance.frontend.main.seedance_text_image_to_video_tab import SeedanceTextImageToVideoTab as SeedanceTab
-            tab_configs.append(("Seedance", SeedanceTab))
-        except ImportError as e:
-            print(f"[WARN] Seedance not loaded: {e}")
-
-        for name, TabClass in tab_configs:
+        for name, mod_path, cls_name in tab_imports:
+            print(f"[MainApp] Importing {name} from {mod_path}...", flush=True)
             try:
+                import importlib
+                mod = importlib.import_module(mod_path)
+                TabClass = getattr(mod, cls_name)
+                print(f"[MainApp] Creating {name} widget...", flush=True)
                 tab = TabClass()
                 self.tab_widget.addTab(tab, name)
                 self.tabs[name] = tab
+                print(f"[MainApp] {name} OK", flush=True)
             except Exception as e:
-                print(f"[ERROR] Failed to create tab '{name}': {e}")
+                print(f"[MainApp] {name} FAILED: {e}", flush=True)
                 placeholder = QWidget()
                 layout = QVBoxLayout(placeholder)
                 layout.addWidget(QLabel(f"Failed to load: {e}"))
