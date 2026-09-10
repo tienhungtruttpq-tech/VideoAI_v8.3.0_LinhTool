@@ -26,11 +26,20 @@ class AuthScreen(QWidget):
         self.license_key = "local"
 
     async def boot(self):
-        app_window = MainApp()
-        await app_window.boot()
-        app_window.show()
-        self.close()
-        return app_window
+        try:
+            print("[AuthScreen] Creating MainApp...")
+            app_window = MainApp()
+            print("[AuthScreen] Calling MainApp.boot()...")
+            await app_window.boot()
+            print("[AuthScreen] Showing window...")
+            app_window.show()
+            print("[AuthScreen] Done.")
+            return app_window
+        except Exception as e:
+            print(f"[AuthScreen] FATAL: {e}")
+            import traceback
+            traceback.print_exc()
+            return None
 
 
 class MainApp(QMainWindow):
@@ -45,11 +54,17 @@ class MainApp(QMainWindow):
         self._queue_managers = {}
 
     async def boot(self):
+        print("[MainApp] _setup_window...")
         self._setup_window()
+        print("[MainApp] _setup_tabs...")
         self._setup_tabs()
+        print("[MainApp] _setup_merge_video_dock...")
         self._setup_merge_video_dock()
+        print("[MainApp] _setup_menu...")
         self._setup_menu()
+        print("[MainApp] _init_services...")
         await self._init_services()
+        print("[MainApp] boot complete.")
 
     def _setup_window(self):
         self.setWindowTitle("VideoAI v8.3.0")
