@@ -1,0 +1,37 @@
+﻿=== PyInit_app (RVA 0x115a50) ===
+Bytes: 488d0d193a040048ff25929a0200cccc
+LEA rcx -> RVA 0x159470
+JMP -> IAT RVA 0x13f4f0: python313.dll!PyModuleDef_Init
+
+=== PyModuleDef at RVA 0x159470 ===
+  Raw (first 120 bytes): 
+    +  0: 0xffffffff
+    +  8: 0x0
+    + 16: 0x0
+    + 24: 0x0
+    + 32: 0x0
+    + 40: 0x180142300
+    + 48: 0x0
+    + 56: 0x0
+    + 64: 0x1801636e0
+    + 72: 0x1801541e0
+    + 80: 0x0
+    + 88: 0x0
+    + 96: 0x0
+    +104: 0x1801415c8
+    +112: 0x180100b30
+
+  m_name: 'app' (at RVA 0x142300)
+
+  m_slots at RVA 0x1541e0:
+    Slot 1: func at RVA 0x115a60
+    -> This is the MODULE EXEC function!
+    -> Function range: 0x115a60-0x115ad6 (size 118)
+    -> Calls from module exec function:
+       FF15 at 0x115a69 -> python313.dll!PyThreadState_Get
+       FF15 at 0x115a73 -> python313.dll!PyInterpreterState_GetID
+       FF15 at 0x115ac8 -> python313.dll!PyErr_SetString
+    -> Total calls: 3
+    Slot 2: func at RVA 0x115d20
+
+Done!

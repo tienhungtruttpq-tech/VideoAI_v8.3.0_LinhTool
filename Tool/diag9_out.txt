@@ -1,0 +1,30 @@
+﻿=== Big init function at RVA 0x12d3c0 ===
+PDATA: 0x12d3c0-0x12d3df (size 31)
+File offset: 0x12c7c0
+First 32 bytes: 488b8d000900004833cce8810401004881c4b00b0000415f415d415c5b5dc3cc
+
+Scanning for E8 calls in init function (31 bytes)...
+Found 1 E8 calls
+
+Protection-related calls:
+
+E9 JMPs:
+
+Python sys.exit / Py_Exit related calls:
+
+Unique E8 targets: 1
+
+First 30 unique call targets:
+  0x13d850 (in 0x13d850-0x13d86e, size 30)
+
+
+=== DIRECT calls to protection entry points ===
+  _secvio: NOT CALLED from init (indirect call or via vtable)
+  _ausi: NOT CALLED from init (indirect call or via vtable)
+  _ausi_helper1: NOT CALLED from init (indirect call or via vtable)
+  _fz878ct?: NOT CALLED from init (indirect call or via vtable)
+
+
+=== String references from init (first 2000 bytes) ===
+
+Done!

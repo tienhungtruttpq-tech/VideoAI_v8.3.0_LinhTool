@@ -1,0 +1,252 @@
+﻿Reading original PYD from backup...
+Found _Py_NoneStruct IAT at RVA 0x13f1c8
+
+Searching for _Py_NoneStruct references in .text...
+No LEA references found. Checking MOV patterns...
+Found 53 MOV references to Py_None
+  At file 0x6a94, RVA 0x7694: MOV -> _Py_NoneStruct (IAT 0x13f1c8)
+  At file 0x712a, RVA 0x7d2a: MOV -> _Py_NoneStruct (IAT 0x13f1c8)
+  At file 0x7a94, RVA 0x8694: MOV -> _Py_NoneStruct (IAT 0x13f1c8)
+  At file 0x7f2a, RVA 0x8b2a: MOV -> _Py_NoneStruct (IAT 0x13f1c8)
+  At file 0xaae2, RVA 0xb6e2: MOV -> _Py_NoneStruct (IAT 0x13f1c8)
+
+Searching for _Py_NoneStruct in data section globals...
+
+All Python IAT entries with 'None':
+  IAT 0x13f170: python313.dll!PyErr_SetNone
+  IAT 0x13f1c8: python313.dll!_Py_NoneStruct
+  IAT 0x13f2d8: python313.dll!_Py_FalseStruct
+  IAT 0x13f548: python313.dll!PyObject_IsTrue
+  IAT 0x13f5a8: python313.dll!_Py_TrueStruct
+
+
+Searching for short 'return None' functions...
+
+All python313.dll data imports:
+
+Looking for _Py_NoneStruct specifically...
+  FOUND: IAT 0x13f1c8: python313.dll!_Py_NoneStruct
+  Python None-related: IAT 0x13f170: PyErr_SetNone
+  Python None-related: IAT 0x13f1c8: _Py_NoneStruct
+  Python None-related: IAT 0x13f2d8: _Py_FalseStruct
+  Python None-related: IAT 0x13f5a8: _Py_TrueStruct
+
+All python313.dll imports:
+  0x13f100: PyList_Sort
+  0x13f108: PyObject_GenericGetAttr
+  0x13f110: PyNumber_Absolute
+  0x13f118: PyTraceBack_Here
+  0x13f120: PyList_SetSlice
+  0x13f128: PyExc_RuntimeError
+  0x13f130: PyMethod_New
+  0x13f138: PyObject_SetAttrString
+  0x13f140: PyLong_FromLong
+  0x13f148: PyObject_GC_UnTrack
+  0x13f150: PyObject_Hash
+  0x13f158: PyUnicode_Concat
+  0x13f160: PyNumber_Xor
+  0x13f168: PyExc_UnboundLocalError
+  0x13f170: PyErr_SetNone
+  0x13f178: PyDict_Pop
+  0x13f180: PyDict_GetItemWithError
+  0x13f188: PyInterpreterState_GetID
+  0x13f190: PySet_Contains
+  0x13f198: PyObject_GetAttr
+  0x13f1a0: PyModule_GetName
+  0x13f1a8: PyDict_Contains
+  0x13f1b0: PyUnicode_FromOrdinal
+  0x13f1b8: PyObject_HasAttr
+  0x13f1c0: PyErr_GetRaisedException
+  0x13f1c8: _Py_NoneStruct
+  0x13f1d0: PyTuple_New
+  0x13f1d8: PySequence_Contains
+  0x13f1e0: PyObject_GenericSetDict
+  0x13f1e8: PyObject_VisitManagedDict
+  0x13f1f0: PyDict_SetItemString
+  0x13f1f8: PyDict_Size
+  0x13f200: PyLong_FromLongLong
+  0x13f208: PyDict_SetDefaultRef
+  0x13f210: PyFloat_FromDouble
+  0x13f218: PyGC_Disable
+  0x13f220: PySet_Add
+  0x13f228: PyExc_AttributeError
+  0x13f230: PyTuple_GetSlice
+  0x13f238: PyUnicode_New
+  0x13f240: PyNumber_Multiply
+  0x13f248: PyErr_SetString
+  0x13f250: PyExc_ZeroDivisionError
+  0x13f258: PyObject_CallFunction
+  0x13f260: PyIter_Next
+  0x13f268: PyErr_WriteUnraisable
+  0x13f270: PyObject_GetIter
+  0x13f278: PyNumber_Add
+  0x13f280: PyErr_WarnFormat
+  0x13f288: PyErr_SetRaisedException
+  0x13f290: PyExc_ValueError
+  0x13f298: PyUnicode_InternInPlace
+  0x13f2a0: PyDict_Next
+  0x13f2a8: PyErr_Format
+  0x13f2b0: PyDict_Type
+  0x13f2b8: PyThreadState_GetUnchecked
+  0x13f2c0: PyObject_RichCompare
+  0x13f2c8: PyBool_Type
+  0x13f2d0: PyTuple_Type
+  0x13f2d8: _Py_FalseStruct
+  0x13f2e0: PyImport_GetModule
+  0x13f2e8: PyCoro_Type
+  0x13f2f0: PyNumber_InPlaceAdd
+  0x13f2f8: PyFloat_Type
+  0x13f300: PyModule_NewObject
+  0x13f308: PyMethod_Type
+  0x13f310: PyLong_Type
+  0x13f318: PyType_IsSubtype
+  0x13f320: PyNumber_Subtract
+  0x13f328: PyErr_Restore
+  0x13f330: PyUnicode_Join
+  0x13f338: PyExc_OverflowError
+  0x13f340: _Py_Dealloc
+  0x13f348: PyTuple_GetItem
+  0x13f350: PyImport_GetModuleDict
+  0x13f358: PyModule_GetDict
+  0x13f360: PyObject_Format
+  0x13f368: PyErr_ExceptionMatches
+  0x13f370: PyObject_ClearManagedDict
+  0x13f378: PyObject_Dir
+  0x13f380: PyUnicode_FindChar
+  0x13f388: PyObject_GC_Del
+  0x13f390: PyErr_Fetch
+  0x13f398: PyObject_CallFunctionObjArgs
+  0x13f3a0: PyLong_AsLong
+  0x13f3a8: PyObject_GenericGetDict
+  0x13f3b0: PyObject_ClearWeakRefs
+  0x13f3b8: PyObject_Init
+  0x13f3c0: PyNumber_Remainder
+  0x13f3c8: PyUnicode_FromFormat
+  0x13f3d0: Py_Version
+  0x13f3d8: PySet_New
+  0x13f3e0: PyList_New
+  0x13f3e8: PySlice_New
+  0x13f3f0: PyObject_GC_IsFinalized
+  0x13f3f8: PyType_Ready
+  0x13f400: PyUnicode_Contains
+  0x13f408: PyObject_GetAttrString
+  0x13f410: PyErr_Clear
+  0x13f418: PyList_Append
+  0x13f420: PyBytes_Type
+  0x13f428: PyObject_RichCompareBool
+  0x13f430: PyUnicode_Decode
+  0x13f438: PyException_SetTraceback
+  0x13f440: PySet_Type
+  0x13f448: PyObject_VectorcallDict
+  0x13f450: PyDict_SetItem
+  0x13f458: PyDict_New
+  0x13f460: PyUnicode_Type
+  0x13f468: PyGen_GetCode
+  0x13f470: PyObject_CallFinalizerFromDealloc
+  0x13f478: _PyDict_GetItem_KnownHash
+  0x13f480: PyObject_VectorcallMethod
+  0x13f488: PyException_SetContext
+  0x13f490: PyObject_IsInstance
+  0x13f498: PyMem_Free
+  0x13f4a0: PyExc_StopIteration
+  0x13f4a8: PyObject_GetOptionalAttr
+  0x13f4b0: PyFrozenSet_New
+  0x13f4b8: PyCMethod_New
+  0x13f4c0: PyList_Type
+  0x13f4c8: PyErr_NoMemory
+  0x13f4d0: PyDict_GetItemString
+  0x13f4d8: PyExc_OSError
+  0x13f4e0: PyObject_GetItem
+  0x13f4e8: PyObject_CallObject
+  0x13f4f0: PyModuleDef_Init
+  0x13f4f8: PyObject_GC_Track
+  0x13f500: PyBytes_FromStringAndSize
+  0x13f508: PyNumber_Check
+  0x13f510: PyNumber_Long
+  0x13f518: PyUnstable_Code_NewWithPosOnlyArgs
+  0x13f520: PyDict_GetItemRef
+  0x13f528: PyObject_IsSubclass
+  0x13f530: PyExc_TypeError
+  0x13f538: PyMem_Realloc
+  0x13f540: PyType_FromMetaclass
+  0x13f548: PyObject_IsTrue
+  0x13f550: PyDict_Copy
+  0x13f558: PyObject_Str
+  0x13f560: PyExc_NameError
+  0x13f568: PyUnicode_AsUTF8String
+  0x13f570: PyTuple_Pack
+  0x13f578: PyCallable_Check
+  0x13f580: PyMem_Malloc
+  0x13f588: PyList_AsTuple
+  0x13f590: Py_EnterRecursiveCall
+  0x13f598: PyExc_ImportError
+  0x13f5a0: PyGen_Type
+  0x13f5a8: _Py_TrueStruct
+  0x13f5b0: PyArg_UnpackTuple
+  0x13f5b8: PyMemoryView_FromMemory
+  0x13f5c0: PyExc_SystemError
+  0x13f5c8: PyObject_SetItem
+  0x13f5d0: _PyObject_GC_New
+  0x13f5d8: PyException_SetCause
+  0x13f5e0: PyTraceBack_Type
+  0x13f5e8: PyMethodDescr_Type
+  0x13f5f0: PyExc_GeneratorExit
+  0x13f5f8: PyNumber_Or
+  0x13f600: PyUnicode_FromString
+  0x13f608: PyLong_FromSize_t
+  0x13f610: _PyLong_Copy
+  0x13f618: _PyType_Lookup
+  0x13f620: PyObject_Size
+  0x13f628: PyObject_Call
+  0x13f630: PyObject_Repr
+  0x13f638: PyByteArray_Type
+  0x13f640: PyType_Type
+  0x13f648: PySequence_Tuple
+  0x13f650: PyUnicode_Substring
+  0x13f658: PyUnicode_FromStringAndSize
+  0x13f660: PyIter_Check
+  0x13f668: _PyObject_GetDictPtr
+  0x13f670: PyUnicode_DecodeUTF8
+  0x13f678: PyLong_FromSsize_t
+  0x13f680: PyArg_ValidateKeywordArguments
+  0x13f688: PyErr_Occurred
+  0x13f690: PyDict_Update
+  0x13f698: PyObject_SelfIter
+  0x13f6a0: PyErr_NormalizeException
+  0x13f6a8: PyImport_ImportModuleLevelObject
+  0x13f6b0: PyBytes_AsString
+  0x13f6b8: PyImport_ImportModule
+  0x13f6c0: PyImport_AddModuleRef
+  0x13f6c8: Py_LeaveRecursiveCall
+  0x13f6d0: PyExc_KeyError
+  0x13f6d8: PyExc_DeprecationWarning
+  0x13f6e0: PyUnicode_Replace
+  0x13f6e8: PyFrame_New
+  0x13f6f0: PyThreadState_GetFrame
+  0x13f6f8: PyExc_RuntimeWarning
+  0x13f700: PyErr_WarnEx
+  0x13f708: PyUnicode_Resize
+  0x13f710: PyErr_GivenExceptionMatches
+  0x13f718: PyObject_HasAttrWithError
+  0x13f720: PyCode_NewEmpty
+  0x13f728: PyDict_SetDefault
+  0x13f730: PyErr_SetObject
+  0x13f738: PyException_GetTraceback
+  0x13f740: PyExc_Exception
+  0x13f748: PyThreadState_Get
+  0x13f750: PyOS_snprintf
+  0x13f758: PyCFunction_Type
+  0x13f760: PyUnicode_InternFromString
+  0x13f768: PyObject_SetAttr
+  0x13f770: PyCallIter_New
+  0x13f778: PyGC_Enable
+  0x13f780: _PyDict_NewPresized
+  0x13f788: PyBaseObject_Type
+  0x13f790: PySequence_List
+  0x13f798: PyUnicode_CopyCharacters
+  0x13f7a0: PyObject_Vectorcall
+  0x13f7a8: PyFrozenSet_Type
+
+Total python313 imports: 214
+
+Done!

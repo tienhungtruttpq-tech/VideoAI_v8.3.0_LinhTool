@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Bridge V6",
+  "version": "6.0",
+  "permissions": ["scripting", "activeTab", "offscreen", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Bridge Debugger"
+  }
+}

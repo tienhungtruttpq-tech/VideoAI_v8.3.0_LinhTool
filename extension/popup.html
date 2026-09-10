@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { width: 320px; font-family: sans-serif; padding: 10px; background: #f0f0f0; }
+        .box { padding: 10px; border-radius: 5px; text-align: center; margin-bottom: 10px; font-weight: bold;}
+        .connected { background: #d4edda; color: #155724; }
+        .disconnected { background: #f8d7da; color: #721c24; }
+        #logs { height: 200px; overflow-y: scroll; background: #222; color: #0f0; padding: 5px; font-size: 11px; font-family: monospace; border-radius: 4px;}
+        .entry { border-bottom: 1px solid #333; padding: 2px 0; }
+    </style>
+</head>
+<body>
+    <div id="status" class="box disconnected">DISCONNECTED</div>
+    <div id="logs"></div>
+    <script src="popup.js"></script>
+</body>
+</html>

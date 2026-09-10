@@ -1,0 +1,173 @@
+﻿=== Module exec function at RVA 0x115a60 ===
+Hex dump:
+  0x115a60: 40 56 48 83 ec 30 48 8b f1 ff 15 d9 9c 02 00 48
+  0x115a70: 8b 48 10 ff 15 0f 97 02 00 48 83 f8 ff 74 4f 48
+  0x115a80: 8b 15 3a 1c 04 00 48 83 fa ff 75 26 48 89 05 2d
+  0x115a90: 1c 04 00 48 8b 05 96 dc 04 00 48 85 c0 74 37 8b
+  0x115aa0: 08 83 c1 01 0f 84 03 01 00 00 89 08 48 83 c4 30
+  0x115ab0: 5e c3 48 3b d0 74 dc 48 8b 0d da 9a 02 00 48 8d
+  0x115ac0: 15 4b c8 02 00 48 8b 09 ff 15 7a 97 02 00 33 c0
+  0x115ad0: 48 83 c4 30 5e c3
+
+Disassembly hints:
+
+
+=== Entry point RVA: 0x13db84 ===
+First 64 bytes: 48895c24084889742410574883ec20498bf88bda488bf183fa017505e89b0100004c8bc78bd3488bce488b5c2430488b7424384883c4205fe99bfeffffcccccc
+Entry function: 0x13db84-0x13dbc1 (size 61)
+Calls:
+  E8 at 0x13dba0 -> 0x13dd40
+
+
+=== DisableThreadLibraryCalls calls ===
+  CALL at 0x13de03 in func 0x13ddf0-0x13de13 (size 35)
+  Function bytes (35):
+    0x13ddf0: 48 83 ec 28 83 fa 01 75 10 48 83 3d 2f 1a 00 00
+    0x13de00: 00 75 06 ff 15 f7 11 00 00 b8 01 00 00 00 48 83
+    0x13de10: c4 28 c3
+  DllMain calls:
+    FF15 at 0x13de03 -> KERNEL32.dll!DisableThreadLibraryCalls
+
+
+=== Slot 2 (RVA 0x115d20) ===
+Bytes: 405553415441554157488dac24f0f6ffff4881ecb00b0000488b05c1e2030048
+  In section starting at VA 0x1000
+  Function: 0x115d20-0x115de3 (size 195)
+  ALL calls from this function:
+    E8 at 0x115d50 -> -0x4fa91963
+    E8 at 0x115d82 -> -0xfa91931
+    FF15 at 0x115dc0 -> python313.dll!PyErr_SetString
+  Total calls: 3
+
+
+=== Checking CRT init arrays in .data ===
+  .data+0x768: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0xd08: ptr to RVA 0x108b20 (protection area!)
+  .data+0xf30: ptr to RVA 0x10de00 (protection area!)
+  .data+0xfb8: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0xfc0: ptr to RVA 0x10d0e0 (protection area!)
+  .data+0x1038: ptr to RVA 0x10dd80 (protection area!)
+  .data+0x1170: ptr to RVA 0x10d130 (protection area!)
+  .data+0x11f8: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x1200: ptr to RVA 0x10d240 (protection area!)
+  .data+0x1278: ptr to RVA 0x10d020 (protection area!)
+  .data+0x13b8: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x1670: ptr to RVA 0x10fac0 (protection area!)
+  .data+0x1778: ptr to RVA 0x10fa40 (protection area!)
+  .data+0x18d8: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x18e0: ptr to RVA 0x10d0e0 (protection area!)
+  .data+0x1a70: ptr to RVA 0x10fbe0 (protection area!)
+  .data+0x1af8: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x1b78: ptr to RVA 0x10fb60 (protection area!)
+  .data+0x1c08: ptr to RVA 0x63dd0 (protection area!)
+  .data+0x1f90: ptr to RVA 0x10e0e0 (protection area!)
+  .data+0x2018: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x2020: ptr to RVA 0x10d240 (protection area!)
+  .data+0x2098: ptr to RVA 0x10e050 (protection area!)
+  .data+0x21d0: ptr to RVA 0x10f760 (protection area!)
+  .data+0x22d8: ptr to RVA 0x10f6e0 (protection area!)
+  .data+0x2470: ptr to RVA 0x10df50 (protection area!)
+  .data+0x24f8: ptr to RVA 0x10da30 (protection area!)
+  .data+0x2578: ptr to RVA 0x10dec0 (protection area!)
+  .data+0x26c8: ptr to RVA 0x69430 (protection area!)
+  .data+0x27d8: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x27e0: ptr to RVA 0x10d0e0 (protection area!)
+  .data+0x2a88: ptr to RVA 0x62dc0 (protection area!)
+  .data+0x2aa8: ptr to RVA 0x66c60 (protection area!)
+  .data+0x2ac8: ptr to RVA 0x6c8d0 (protection area!)
+  .data+0x2b08: ptr to RVA 0x63dc0 (protection area!)
+  .data+0x2b50: ptr to RVA 0x10e980 (protection area!)
+  .data+0x2bd8: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x2be0: ptr to RVA 0x10d0e0 (protection area!)
+  .data+0x2c58: ptr to RVA 0x10e900 (protection area!)
+  .data+0x2f48: ptr to RVA 0x66390 (protection area!)
+  .data+0x2f90: ptr to RVA 0x10ec50 (protection area!)
+  .data+0x3018: ptr to RVA 0x10e510 (protection area!)
+  .data+0x3098: ptr to RVA 0x10ebd0 (protection area!)
+  .data+0x31d8: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x31e0: ptr to RVA 0x10d0e0 (protection area!)
+  .data+0x32f0: ptr to RVA 0x10d350 (protection area!)
+  .data+0x3378: ptr to RVA 0x10d470 (protection area!)
+  .data+0x3380: ptr to RVA 0x10d500 (protection area!)
+  .data+0x33f8: ptr to RVA 0x10d2c0 (protection area!)
+  .data+0x3780: ptr to RVA 0x10edf0 (protection area!)
+  .data+0x3888: ptr to RVA 0x10ed70 (protection area!)
+  .data+0x3a08: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x3a10: ptr to RVA 0x10d240 (protection area!)
+  .data+0x3bc8: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x3bd0: ptr to RVA 0x10d0e0 (protection area!)
+  .data+0x3dc8: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x3f20: ptr to RVA 0x10fe70 (protection area!)
+  .data+0x4028: ptr to RVA 0x10fdf0 (protection area!)
+  .data+0x4418: ptr to RVA 0x65150 (protection area!)
+  .data+0x44b8: ptr to RVA 0x1090c0 (protection area!)
+  .data+0x4500: ptr to RVA 0x10ff90 (protection area!)
+  .data+0x4608: ptr to RVA 0x10ff10 (protection area!)
+  .data+0x4780: ptr to RVA 0x10d030 (protection area!)
+  .data+0x4808: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x4810: ptr to RVA 0x10d0e0 (protection area!)
+  .data+0x4888: ptr to RVA 0x10d020 (protection area!)
+  .data+0x4b38: ptr to RVA 0x62370 (protection area!)
+  .data+0x4b58: ptr to RVA 0x6bf10 (protection area!)
+  .data+0x4d40: ptr to RVA 0x10f880 (protection area!)
+  .data+0x4e48: ptr to RVA 0x10f800 (protection area!)
+  .data+0x4eb8: ptr to RVA 0x6ca30 (protection area!)
+  .data+0x4f88: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x4f90: ptr to RVA 0x10d0e0 (protection area!)
+  .data+0x5238: ptr to RVA 0x6bc20 (protection area!)
+  .data+0x5368: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x5530: ptr to RVA 0x10fd50 (protection area!)
+  .data+0x5638: ptr to RVA 0x10fcd0 (protection area!)
+  .data+0x5710: ptr to RVA 0x10f150 (protection area!)
+  .data+0x5818: ptr to RVA 0x10f0d0 (protection area!)
+  .data+0x5938: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x5940: ptr to RVA 0x10d240 (protection area!)
+  .data+0x5a70: ptr to RVA 0x10ef10 (protection area!)
+  .data+0x5b78: ptr to RVA 0x10ee90 (protection area!)
+  .data+0x5c70: ptr to RVA 0x10f030 (protection area!)
+  .data+0x5d78: ptr to RVA 0x10efb0 (protection area!)
+  .data+0x6090: ptr to RVA 0x10f2a0 (protection area!)
+  .data+0x6118: ptr to RVA 0x10f550 (protection area!)
+  .data+0x6198: ptr to RVA 0x10f1f0 (protection area!)
+  .data+0x6230: ptr to RVA 0x10f9a0 (protection area!)
+  .data+0x6338: ptr to RVA 0x10f920 (protection area!)
+  .data+0x63d0: ptr to RVA 0x10dc90 (protection area!)
+  .data+0x6458: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x64d8: ptr to RVA 0x10dc10 (protection area!)
+  .data+0x65c8: ptr to RVA 0x6eb10 (protection area!)
+  .data+0x6670: ptr to RVA 0x10d7e0 (protection area!)
+  .data+0x66f8: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x6700: ptr to RVA 0x10d0e0 (protection area!)
+  .data+0x6778: ptr to RVA 0x10d760 (protection area!)
+  .data+0x6890: ptr to RVA 0x10ead0 (protection area!)
+  .data+0x6918: ptr to RVA 0x10da30 (protection area!)
+  .data+0x6998: ptr to RVA 0x10ea40 (protection area!)
+  .data+0x6a28: ptr to RVA 0x690c0 (protection area!)
+  .data+0x6d70: ptr to RVA 0x10e630 (protection area!)
+  .data+0x6df8: ptr to RVA 0x10e800 (protection area!)
+  .data+0x6e78: ptr to RVA 0x10e5a0 (protection area!)
+  .data+0x7088: ptr to RVA 0x6c410 (protection area!)
+  .data+0x70d0: ptr to RVA 0x10d670 (protection area!)
+  .data+0x7158: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x71d8: ptr to RVA 0x10d5f0 (protection area!)
+  .data+0x7290: ptr to RVA 0x10e270 (protection area!)
+  .data+0x7318: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x7320: ptr to RVA 0x10d240 (protection area!)
+  .data+0x7398: ptr to RVA 0x10e1e0 (protection area!)
+  .data+0x7470: ptr to RVA 0x10d930 (protection area!)
+  .data+0x74f8: ptr to RVA 0x10da30 (protection area!)
+  .data+0x7578: ptr to RVA 0x10d8a0 (protection area!)
+  .data+0x7630: ptr to RVA 0x10db20 (protection area!)
+  .data+0x76b8: ptr to RVA 0x10d1e0 (protection area!)
+  .data+0x7738: ptr to RVA 0x10daa0 (protection area!)
+  .data+0x7988: ptr to RVA 0x6b6e0 (protection area!)
+  .data+0x79d0: ptr to RVA 0x10e3f0 (protection area!)
+  .data+0x7a58: ptr to RVA 0x10e510 (protection area!)
+  .data+0x7ad8: ptr to RVA 0x10e370 (protection area!)
+  .data+0x7db8: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x7dc0: ptr to RVA 0x10d0e0 (protection area!)
+  .data+0x8088: ptr to RVA 0x66fd0 (protection area!)
+  .data+0x84d8: ptr to RVA 0x10d0c0 (protection area!)
+  .data+0x84e0: ptr to RVA 0x10d0e0 (protection area!)
+
+Done!

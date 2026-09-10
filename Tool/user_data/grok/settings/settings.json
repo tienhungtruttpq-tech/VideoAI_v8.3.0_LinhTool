@@ -1,0 +1,47 @@
+{
+  "queue_manager": {
+    "polling_interval": 10.0,
+    "max_retries": 15,
+    "max_status_failed_error_cnt": 5,
+    "http_fail_wait": 10.0,
+    "status_fail_wait": 5.0,
+    "dl_retry_times": 10,
+    "dl_retry_delay": 5.0,
+    "wait_after_create_seconds": 5.0,
+    "wait_between_generation": 6.0,
+    "max_concurrent_creates": 15,
+    "stream_update_min_interval_seconds": 5.0,
+    "ff_task_creation_limit": 10,
+    "ff_download_limit": 3,
+    "output_filename_prompt_max_length": 60
+  },
+  "network": {
+    "request_timeout_seconds": 300,
+    "chrome_version": "chrome146",
+    "statsig_gen_mode": "svg",
+    "request_user_agent_mode": "auto",
+    "request_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+    "use_request_user_agent": true,
+    "adapt_request_user_agent_to_os": true,
+    "complete_adapt_request_user_agent_to_os": true,
+    "cookie_refresh_timeout_seconds": 50,
+    "post_refresh_cooldown_seconds": 8,
+    "cookie_refresh_wait_buffer_seconds": 5,
+    "proxy_string": "",
+    "apply_request_proxy": true,
+    "max_403_retries": 3,
+    "authenticate_all_delay_seconds": 7.0,
+    "browser_executable_path": "",
+    "user_agent_mode": "request",
+    "adapt_browser_user_agent_to_os": true,
+    "static_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+    "browser_window_offscreen": true
+  },
+  "generation": {
+    "default_model": "imagine-video-gen",
+    "default_aspect_ratio": "9:16",
+    "default_video_length": 10,
+    "default_resolution": "720p"
+  },
+  "logging_profile": "default"
+}

@@ -1,0 +1,49 @@
+﻿=== Py_mod_exec function at RVA 0x115d20 ===
+Size: 195 bytes
+  0x115d20: 40 55 53 41 54 41 55 41 57 48 8d ac 24 f0 f6 ff
+  0x115d30: ff 48 81 ec b0 0b 00 00 48 8b 05 c1 e2 03 00 48
+  0x115d40: 33 c4 48 89 85 00 09 00 00 33 c0 89 45 08 44 8b
+  0x115d50: e8 48 89 45 b0 44 8b e0 48 89 45 88 44 8b f8 48
+  0x115d60: 89 45 d0 48 89 45 80 48 89 45 a8 48 89 45 98 48
+  0x115d70: 89 45 b8 48 89 45 c0 48 89 45 d8 48 89 45 e0 48
+  0x115d80: 89 45 e8 48 89 45 f0 48 89 45 f8 48 89 45 00 48
+  0x115d90: 89 45 c8 48 89 45 a0 48 8b 05 92 d9 04 00 48 85
+  0x115da0: c0 74 2f 48 3b c1 75 07 33 c0 e9 11 76 01 00 48
+  0x115db0: 8b 0d 72 93 02 00 48 8d 15 33 c6 02 00 48 8b 09
+  0x115dc0: ff 15 82 94 02 00 48 c7 c0 ff ff ff ff e9 ee 75
+  0x115dd0: 01 00 48 89 4d b0 8b 01 83 c0 01 74 06 89 01 48
+  0x115de0: 8b 4d b0
+
+E8 CALL analysis:
+  E8 at RVA 0x115d50 -> -0x4fa91963 (OUT OF RANGE)
+  E8 at RVA 0x115d82 -> -0xfa91931 (OUT OF RANGE)
+
+FF15 IAT CALL analysis:
+  FF15 at RVA 0x115dc0 -> python313.dll!PyErr_SetString
+
+
+=== Slot 1 function at RVA 0x115a60 (Py_mod_create) ===
+Size: 118 bytes
+  0x115a60: 40 56 48 83 ec 30 48 8b f1 ff 15 d9 9c 02 00 48
+  0x115a70: 8b 48 10 ff 15 0f 97 02 00 48 83 f8 ff 74 4f 48
+  0x115a80: 8b 15 3a 1c 04 00 48 83 fa ff 75 26 48 89 05 2d
+  0x115a90: 1c 04 00 48 8b 05 96 dc 04 00 48 85 c0 74 37 8b
+  0x115aa0: 08 83 c1 01 0f 84 03 01 00 00 89 08 48 83 c4 30
+  0x115ab0: 5e c3 48 3b d0 74 dc 48 8b 0d da 9a 02 00 48 8d
+  0x115ac0: 15 4b c8 02 00 48 8b 09 ff 15 7a 97 02 00 33 c0
+  0x115ad0: 48 83 c4 30 5e c3
+
+E8 calls:
+
+FF15 calls:
+  FF15 at RVA 0x115a69 -> python313.dll!PyThreadState_Get
+  FF15 at RVA 0x115a73 -> python313.dll!PyInterpreterState_GetID
+  FF15 at RVA 0x115ac8 -> python313.dll!PyErr_SetString
+
+
+=== Searching for __pyx_pymod_exec ===
+
+
+=== Tracing E8 targets from Py_mod_exec ===
+
+Done!

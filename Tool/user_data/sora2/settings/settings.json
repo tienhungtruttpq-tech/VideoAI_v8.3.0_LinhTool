@@ -1,0 +1,42 @@
+{
+  "queue_manager": {
+    "polling_interval": 5.0,
+    "max_retries": 15,
+    "max_status_failed_error_cnt": 5,
+    "http_fail_wait": 10.0,
+    "status_fail_wait": 5.0,
+    "dl_retry_times": 10,
+    "dl_retry_delay": 5.0,
+    "wait_after_create_seconds": 5.0,
+    "wait_between_generation": 0.0,
+    "max_batch_account_check": 7,
+    "max_concurrent_creates": 15,
+    "error_429_increment_wait": 30.0,
+    "error_429_max_wait": 180.0,
+    "output_filename_prompt_max_length": 60
+  },
+  "network": {
+    "request_timeout_seconds": 450,
+    "max_sentinel_retries": 1,
+    "sentinel_retry_delay": 5.0,
+    "sentinel_token_timeout_seconds": 18,
+    "sentinel_max_cached_uses": 1,
+    "sentinel_max_cached_uses_create_task": 1,
+    "chrome_version_create_task": "chrome146",
+    "chrome_version_non_create_task": "chrome146",
+    "browser_executable_path": "",
+    "proxy_mode": "none",
+    "proxy_string": "",
+    "topproxy_apikey": "",
+    "proxymart_apikey": "",
+    "apply_request_proxy": true,
+    "authenticate_all_delay_seconds": 3.0,
+    "run_mode": "request",
+    "profile_browser_load_cookies": false,
+    "browser_user_agent_mode": "auto",
+    "browser_static_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+    "window_far_position": true,
+    "window_start_minimized": false
+  },
+  "logging_profile": "default"
+}

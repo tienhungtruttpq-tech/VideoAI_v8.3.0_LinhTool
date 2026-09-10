@@ -1,0 +1,7 @@
+atexit triggered
+  File "C:\Users\TAN PHUOC\Downloads\sfx bổ sung\VideoAI_v8.3.0_LinhTool_Win64\Tool\v6b_runner.py", line 86, in <module>
+    spec.loader.exec_module(mod)
+  File "<frozen importlib._bootstrap_external>", line 1325, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\TAN PHUOC\Downloads\sfx bổ sung\VideoAI_v8.3.0_LinhTool_Win64\Tool\v6b_runner.py", line 61, in on_atexit
+    traceback.print_stack(file=f)
