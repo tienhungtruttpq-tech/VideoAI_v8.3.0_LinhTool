@@ -17,6 +17,19 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, QTimer
 
 
+def _secvio(*args, **kwargs):
+    pass
+
+def _ausi(*args, **kwargs):
+    return True
+
+def _fz878ct(*args, **kwargs):
+    pass
+
+machine_id = "local"
+license_key = "local"
+
+
 class AuthScreen(QWidget):
     """Bypassed auth screen - goes directly to MainApp."""
 
