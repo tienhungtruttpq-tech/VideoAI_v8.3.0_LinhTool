@@ -1,23 +1,23 @@
 @echo off
 echo ============================================
-echo  VideoAI v8.3.0 - Machine Auth Removal Tool
-echo  Author recovery after hard drive failure
+echo  VideoAI v8.3.0 - Author Recovery Setup
+echo  Replaces locked .pyd with clean .py sources
 echo ============================================
 echo.
 
 call venv\Scripts\activate
 
-echo Step 1: Applying binary patch...
-python patch_remove_machine_auth.py
+echo Step 1: Disabling machine-locked .pyd modules...
+python setup_noauth.py
 if errorlevel 1 (
     echo.
-    echo ERROR: Patch failed! Check the output above.
+    echo ERROR: Setup failed!
     pause
     exit /b 1
 )
 
 echo.
-echo Step 2: Launching app with runtime protection...
+echo Step 2: Launching app...
 set QT_QPA_PLATFORM_PLUGIN_PATH=C:\qt5_plugins\platforms
-python main_noauth.py
+python main.py
 pause
